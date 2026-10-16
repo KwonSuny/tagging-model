@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+
+# 语料、训练权重、人工审核及本地产物不进入源码仓库。
+/PKU-SEGPOS/
+/data/
+/outputs/
+/model/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+pytorch_model.bin
+*.zip
