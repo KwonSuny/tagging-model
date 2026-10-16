@@ -1,0 +1,67 @@
+{
+  "recorded_at": "2026-10-11",
+  "status": "locally_verified_reference_not_bundled_model",
+  "model": "bert-base-chinese",
+  "base_revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+  "data_version": "prepared_v3",
+  "effective_pos_classes": 43,
+  "bio_labels": 87,
+  "training": {
+    "epochs": 6.0,
+    "learning_rate": 3e-05,
+    "batch_size": 16,
+    "gradient_accumulation": 4,
+    "max_len": 256,
+    "overlap": 64,
+    "seed": 42,
+    "decoder": "viterbi",
+    "patience": 2
+  },
+  "training_precision": "bf16",
+  "inference_precision": "fp32",
+  "best_epoch": 5,
+  "best_step": 2255,
+  "source_sha256": {
+    "train": "b105ca70b7ef38f6b8ae54a1331e24914bd812a463792cda696bd5e7ce0aecc2",
+    "dev": "bddece04b3838cc6033942bceb21c78a415b316952ca6537e37dd3864d38c8ec",
+    "catalog": "de3cb6a54b91f80923cb43b605761ae8041b78ccf9575ecd6d4c2be2f95f6c35"
+  },
+  "metrics": {
+    "official_dev": {
+      "paragraphs": 5153,
+      "precision": 0.9440804247648228,
+      "recall": 0.9384108268763874,
+      "f1": 0.9412370881075643,
+      "segmentation": {
+        "precision": 0.9745965534001488,
+        "recall": 0.9687436933934283,
+        "f1": 0.9716613097136688,
+        "pred_correct": 316816,
+        "total_pred": 325074,
+        "total_golden": 327038
+      },
+      "character_coverage": 1.0
+    },
+    "diagnostic_dev": {
+      "paragraphs": 1400,
+      "precision": 0.9585609836776129,
+      "recall": 0.9553681051339185,
+      "f1": 0.9569618811740257,
+      "segmentation": {
+        "precision": 0.9801302597210024,
+        "recall": 0.9768655359010504,
+        "f1": 0.9784951746519771,
+        "pred_correct": 85929,
+        "total_pred": 87671,
+        "total_golden": 87964
+      },
+      "character_coverage": 1.0
+    }
+  },
+  "limits": [
+    "原始语料和训练权重不包含在源码发布包中",
+    "官方dev与诊断集独立报告",
+    "n/ns等源标注口径问题尚待审核",
+    "稀有标签样本少，整体F1不能代表稀有类效果"
+  ]
+}
